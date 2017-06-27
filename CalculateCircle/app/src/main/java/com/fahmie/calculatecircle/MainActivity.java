@@ -30,21 +30,19 @@ public class MainActivity extends Activity
 				public void onClick(View v){
 
 					//proses input
-					if(editTextRadius.getText() != null){
+					//txtViewAnswer.setText(editTextRadius.getText().toString());
 
-						Circle circle1 = new Circle(editTextRadius.getText());
+					//proses input
+					if(!editTextRadius.getText().toString().equals("")){
 
+						//Circle circle1 = new Circle(Double.parseDouble( editTextRadius.getText().toString()));
+						txtViewAnswer.setText(editTextRadius.getText().toString());
+					}else{
+						editTextRadius.setError("Invalid Input");
+						//test
 					}
-
-
-
-					//Toast.makeText(MainActivity.this, "num = " + circle1.getArea(),Toast.LENGTH_LONG).show();
-					txtViewAnswer.setText("" + circle1.getArea());
-
-
-
-
-				}
+			}
+			
 			});
 
 
